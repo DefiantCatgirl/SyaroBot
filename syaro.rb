@@ -25,6 +25,7 @@ class Syaro
     result = nil
 
     @names.each do |name|
+      #puts 'name: ' + name
       if content.match(/^#{name}~+[^\w.]*$/)
         if rand(7) == 0
           return 'Hello to you too~'
