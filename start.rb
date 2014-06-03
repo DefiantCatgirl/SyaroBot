@@ -2,7 +2,7 @@ require_relative 'ircbot'
 require_relative 'syaro'
 
 def start
-  @bot = IrcBot.new("irc.rizon.net", 6667, 'soranowoto', 'SyaroBot', 'Kirima Syaro', Syaro.new('Syaro', 'Syarobot'))
+  @bot = IrcBot.new("irc.rizon.net", 6667, 'soranowoto', 'SyaroBot', 'Kirima Syaro', Syaro.new('Syarobot', 'Syaro'))
 
   trap("INT"){ @bot.quit }
 

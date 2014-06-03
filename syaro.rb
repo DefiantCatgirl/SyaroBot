@@ -26,7 +26,11 @@ class Syaro
 
     @names.each do |name|
       if content.match(/^#{name}~+[^\w.]*$/)
-        return user + '~'
+        if rand(7) == 0
+          return 'Hello to you too~'
+        else
+          return user + '~'
+        end
       elsif content.match(/^#{name}[^\w.]*$/)
         return reply(user, 'how can I help you?')
       elsif content.match(/^#{name}[^\w.]*/)
